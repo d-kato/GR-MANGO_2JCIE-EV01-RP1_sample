@@ -1,0 +1,9 @@
+{
+    "target_overrides": {
+        "*": {
+            "platform.stdio-baud-rate": 115200,
+            "platform.stdio-convert-newlines": true,
+            "target.macros_add": ["MBED_CONF_APP_MAIN_STACK_SIZE=8192"]
+        }
+    }
+}
