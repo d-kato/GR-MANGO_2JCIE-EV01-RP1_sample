@@ -96,13 +96,13 @@ bool OPT3001DNP::read(uint32_t* light)
 uint32_t OPT3001DNP::convert_lux_value_x100(uint16_t value_raw)
 {
     uint32_t value_converted;
-    uint32_t usb_size_x100;
+    uint32_t lsb_size_x100;
     uint32_t data;
 
     // Convert the value to centi-percent RH
-    usb_size_x100 = 1 << ((value_raw >> 12) & 0x0F);
+    lsb_size_x100 = 1 << ((value_raw >> 12) & 0x0F);
     data = value_raw & 0x0FFF;
-    value_converted = usb_size_x100 * data;
+    value_converted = lsb_size_x100 * data;
 
     return value_converted;
 }
