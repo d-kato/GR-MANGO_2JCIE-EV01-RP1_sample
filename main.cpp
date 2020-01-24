@@ -38,7 +38,7 @@ LIS2DW12 lis2dw(SPI_MOSI, SPI_MISO, SPI_SCKL, SPI_SSL); // [LIS2DW12]    : MEMS 
 
 int main(void) {
     int32_t humi, temp32;
-    uint16_t illm;
+    uint32_t illm;
     uint32_t pres, dp, dt;
     int16_t temp16;
     int16_t accl[3];

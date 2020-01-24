@@ -77,10 +77,10 @@ public:
     /** Read the current data from sensor
      *
      *  Once successful, you need to wait 100ms to read again.
-     *  @param light  Llluminance value [lx]
+     *  @param light  Hundredfold illuminance value [lx]
      *  @return true on success, false on failure
      */
-    bool read(uint16_t* light);
+    bool read(uint32_t* light);
 
 private:
     I2C mI2c_;
