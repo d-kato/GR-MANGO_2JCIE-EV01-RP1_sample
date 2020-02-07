@@ -61,3 +61,23 @@ $ mbed import https://github.com/d-kato/GR-MANGO_2JCIE-EV01-RP1_sample
 $ cd GR-MANGO_2JCIE-EV01-RP1_sample
 $ mbed compile -m GR_MANGO -t GCC_ARM --profile debug
 ```
+
+## About custom boot loaders
+This sample uses ``custom bootloader`` ``revision 5``, and you can drag & drop the "xxxx_application.bin" file to write the program. Please see [here](https://github.com/d-kato/bootloader_d_n_d) for the detail.  
+### How to write program
+#### For GR-MANGO
+When using ``DAPLink``, please use ``xxxx.bin`` as following.  
+1. Connect the ``micro USB type B terminal`` to the PC using a USB cable.
+2. You can find the ``MBED`` directory.
+3. Drag & drop ``xxxx.bin`` to the ``MBED`` directory.  
+4. When writing is completed, press the reset button.  
+
+When using ``custom bootloader``, please use ``xxxx_application.bin`` as following.  
+1. Connect the ``USB type C terminal`` to the PC using a USB cable.  
+2. Hold down ``USB0`` and press the reset button.  
+3. You can find the ``GR-MANG`` directory.  
+4. Drag & drop ``xxxx_application.bin`` to the ``GR-MANGO`` directory.  
+5. When writing is completed, press the reset button.  
+
+**Attention!**  
+For the first time only, you need to write a ``custom bootloader`` using ``DAPLink``.  
